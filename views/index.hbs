@@ -2,12 +2,24 @@
 <html>
   <head>
     <title>EDA Phase 1 Express Boilerplate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   </head>
   <body>
+
     <ul>
     {{#each users}}
-      <li>{{name}} ({{email}})</li>
+      <li> <a link href="/profile/{{id}}"> {{name}} </a> ({{email}})</li>
     {{/each}}
     </ul>
+
+    <hr />
+
+    <form action="index" method="post">
+      <p>Add new entry</p>
+      Name: <input name="name">
+      Email <input name="email">
+      <button type="submit" name="submit">Add me!</button>
+    </form>
+
   </body>
 </html>
